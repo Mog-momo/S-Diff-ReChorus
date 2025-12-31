@@ -1,10 +1,89 @@
-.ipynb_checkpoints/
-*.xlsx
-.idea/
+########## 标准 Python 忽略规则（来自 GitHub） ##########
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[codz]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# mypy, pyre, etc.
+.mypy_cache/
+.pyre/
+.pytype/
+
+# PDM
+.pdm-python
+.pdm-build/
+__pypackages__/
+
+# Cursor, Abstra, etc.
+.cursorignore
+.abstra/
+
+########## 你的项目特有规则（必须加！） ##########
+# Data files (DO NOT UPLOAD DATASETS!)
+data/**/*.csv
+data/**/*.pkl
+data/**/*.zip
+data/**/BaseReader.pkl
+
+# Logs and results
+log/
+grid_search_results/
+*.log
+*.json
+*.png
+
+# Notebooks (optional)
+*.ipynb
+
+# OS files
 .DS_Store
-*.pyc
-figure/
-doc/
-model/
-search.py
+Thumbs.db

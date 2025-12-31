@@ -1,4 +1,0 @@
-K_eig,T,alpha_min,batch_size,emb_size,guidance_s,lr,sigma_max,exp_id,success,duration,error
-200,5,0.001,128,256,0.0,0.0001,0.5,1,False,7.835641384124756,Process exited with code 1
-200,5,0.01,128,256,0.0,0.0001,0.5,2,False,1.4343373775482178,Process exited with code 1
-200,10,0.001,128,256,0.0,0.0001,0.5,3,False,1.3727965354919434,Process exited with code 1

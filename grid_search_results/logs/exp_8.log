@@ -1,4 +1,0 @@
-Command: python main.py --model_name SDiff --dataset ml-1m --T 5 --alpha_min 0.001 --sigma_max 0.3 --K_eig 100 --lr 0.0001 --batch_size 64 --emb_size 256 --guidance_s 0.05 --epoch 50 --test_epoch 5 --early_stop 5 --l2 0 --optimizer Adam --metric NDCG,HR --topk 5,10,20 --device cuda:0
-Start time: 2025-12-25 20:05:47
-================================================================================
-python: can't open file 'C:\\Users\\mog\\Desktop\\机器学习\\论文\\ReChorus\\main.py': [Errno 2] No such file or directory
