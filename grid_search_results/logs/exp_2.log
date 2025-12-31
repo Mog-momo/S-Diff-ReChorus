@@ -1,0 +1,85 @@
+Command: cd /d "C:/Users/mog/Desktop/机器学习/论文/ReChorus\src" && python main.py --model_name SDiff --dataset ml-1m --guidance_s 0.0 --lr 0.0001 --T 5 --alpha_min 0.01 --sigma_max 0.5 --K_eig 200 --emb_size 256 --batch_size 128 --epoch 20 --test_epoch 4 --early_stop 4 --l2 0 --optimizer Adam --metric NDCG,HR --topk 5,10 --device cpu
+Start time: 2025-12-25 20:39:18
+================================================================================
+
+Namespace(model_name='SDiff', model_mode='')
+--------------------------------------------- BEGIN: 2025-12-25 20:39:20 ---------------------------------------------
+
+
+=============================
+
+ Arguments          | Values 
+
+=============================
+
+ K_eig              | 200   
+
+ T                  | 5     
+
+ alpha_min          | 0.01  
+
+ batch_size         | 128   
+
+ data_appendix      |       
+
+ dataset            | ml-1m 
+
+ early_stop         | 4     
+
+ emb_size           | 256   
+
+ epoch              | 20    
+
+ eval_batch_size    | 256   
+
+ gpu                | 0     
+
+ guidance_s         | 0.0   
+
+ l2                 | 0.0   
+
+ lr                 | 0.0001
+
+ main_metric        |       
+
+ num_workers        | 5     
+
+ optimizer          | Adam  
+
+ random_seed        | 0     
+
+ save_final_results | 1     
+
+ sigma_max          | 0.5   
+
+ test_all           | 0     
+
+ topk               | 5,10  
+
+=============================
+Device: cpu
+Reading data from "data/", dataset = "ml-1m" 
+Traceback (most recent call last):
+  File "C:\Users\mog\Desktop\ѧϰ\\ReChorus\src\main.py", line 196, in <module>
+    main()
+  File "C:\Users\mog\Desktop\ѧϰ\\ReChorus\src\main.py", line 63, in main
+    corpus = reader_name(args)
+  File "C:\Users\mog\Desktop\ѧϰ\\ReChorus\src\helpers\BaseReader.py", line 28, in __init__
+    self._read_data()
+  File "C:\Users\mog\Desktop\ѧϰ\\ReChorus\src\helpers\BaseReader.py", line 47, in _read_data
+    self.data_df[key] = pd.read_csv(os.path.join(self.prefix, self.dataset, key + '.csv'), sep=self.sep).reset_index(drop=True).sort_values(by = ['user_id','time'])
+  File "D:\anaconda3\envs\rechorus\lib\site-packages\pandas\util\_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "D:\anaconda3\envs\rechorus\lib\site-packages\pandas\util\_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "D:\anaconda3\envs\rechorus\lib\site-packages\pandas\io\parsers\readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "D:\anaconda3\envs\rechorus\lib\site-packages\pandas\io\parsers\readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "D:\anaconda3\envs\rechorus\lib\site-packages\pandas\io\parsers\readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "D:\anaconda3\envs\rechorus\lib\site-packages\pandas\io\parsers\readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+  File "D:\anaconda3\envs\rechorus\lib\site-packages\pandas\io\common.py", line 856, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/ml-1m\\train.csv'
