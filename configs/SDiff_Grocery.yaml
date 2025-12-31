@@ -1,0 +1,28 @@
+# SDiff 模型配置 for Grocery_and_Gourmet_Food 数据集
+model_name: SDiff
+
+# 数据集
+dataset: Grocery_and_Gourmet_Food
+
+# 模型超参数
+emb_size: 64          # 嵌入维度
+T: 5                  # 扩散步数
+K_eig: 100            # 图谱保留前 K 个特征向量（初始建议 50~100）
+alpha_min: 0.01       # 低频信号最小保留系数
+sigma_max: 0.5        # 最大噪声强度
+
+# 训练设置
+learning_rate: 0.001
+batch_size: 128
+eval_batch_size: 256
+epoch: 50
+optimizer: Adam
+l2: 0                 # SDiff 通常不用 L2 正则
+num_workers: 0        # Windows 必须设为 0！
+early_stop: 10
+topk: [5, 10, 20]
+
+# 其他
+random_seed: 2025
+save_final_results: 1
+gpu: 0                # 若无 GPU，删除此行或设为 -1
